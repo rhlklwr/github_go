@@ -1,9 +1,15 @@
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 func main() {
-	a := "Hello"
+	var v string
 
-	println(a)
-	print(a)
-
+	for _, v = range os.Args[1:] {
+		fmt.Printf("%q\n", v)
+	}
+	fmt.Println(v)
 }

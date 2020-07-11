@@ -11,10 +11,9 @@ const (
 )
 
 func main() {
-	blue := [...][3]int{
-		{4, 5, 6},
-		{7, 8, 9},
+	blue := []int{
+		4, 5, 6, 7, 8, 10,
 	}
-
-	fmt.Printf("blue: %#v\n", blue)
+	blue = append(blue, 8, 9, 10, 11, 12)
+	fmt.Printf("blue: %#v\n%v\n%v", blue, cap(blue), len(blue))
 }

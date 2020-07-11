@@ -2,14 +2,19 @@ package main
 
 import (
 	"fmt"
-	"os"
+)
+
+const (
+	winter = 1
+	summer = 3
+	yearly = winter + summer
 )
 
 func main() {
-	var v string
-
-	for _, v = range os.Args[1:] {
-		fmt.Printf("%q\n", v)
+	blue := [...][3]int{
+		{4, 5, 6},
+		{7, 8, 9},
 	}
-	fmt.Println(v)
+
+	fmt.Printf("blue: %#v\n", blue)
 }

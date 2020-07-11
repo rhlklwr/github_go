@@ -120,7 +120,7 @@ func main() {
 			colon,
 			digits[sec/10], digits[sec%10],
 		}
-
+		// for line := 0; line < 2; line++ {
 		for line := range clock[0] {
 			// Print a line for each placeholder in clock
 			for index, digit := range clock {
@@ -136,7 +136,6 @@ func main() {
 
 			fmt.Println()
 		}
-
 		time.Sleep(time.Second)
 	}
 }

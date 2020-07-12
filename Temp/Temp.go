@@ -1,30 +1,17 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 
-	var hey = []int{1, 2, 3}
-	var bye = []int{2, 3}
+	var a = map[string]int{"A": 1}
+	fmt.Println(a)
+	var b = map[string]int{"A": 5}
 
-	var dict = map[string][]int{
-		"Hello": hey,
-	}
+	c := a
 
-	dict["bye"] = bye
+	c["A"] = 6
 
-	turkish := make(map[string][]int, len(dict))
-
-	var turkish1 map[string][]int
-
-	if turkish == nil {
-		fmt.Println("turkish")
-	}
-
-	if turkish1 == nil {
-		fmt.Println("turkish1")
-	}
+	fmt.Println(a, b, c)
 
 }

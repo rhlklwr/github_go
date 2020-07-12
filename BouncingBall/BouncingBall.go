@@ -15,7 +15,7 @@ func main() {
 		cellEmpty = ' '
 		cellBall  = '⚾'
 
-		maxFrames = 1200
+		maxFrames = 1200 // 60 second + 20 Frame per second
 		speed     = time.Second / 20
 	)
 

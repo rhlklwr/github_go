@@ -3,8 +3,6 @@ package main
 import "fmt"
 
 type printer interface {
-	print()
-	discount()
 }
 
 type book struct {
@@ -35,11 +33,15 @@ func main() {
 
 	z = append(z, book1, game1)
 
-	game1.discount()
+	for _, s := range z {
+		switch e := s.(type) {
+		case book:
+			e.print()
+		case game:
+			e.print()
+			e.discount()
+		}
 
-	for _, h := range z {
-		h.print()
-		h.discount()
 	}
 }
 
@@ -53,8 +55,4 @@ func (g game) print() {
 
 func (g game) discount() {
 	fmt.Printf("Game name is %v\nGame price is %v\n", g.name, g.price-10)
-}
-
-func (b book) discount() {
-	fmt.Printf("Game name is %v\nGame price is %v\n", b.name, b.price-10)
 }

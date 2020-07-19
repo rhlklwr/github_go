@@ -1,17 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 func main() {
 
-	c := make(chan int, 5)
-	cr := make(chan<- int, 5)
-	cs := make(<-chan int, 5)
+	in := bufio.NewScanner(os.Stdin)
 
-	_ = cr
-	_ = cs
-	c <- 45
+	in.Scan()
 
-	fmt.Println(c)
+	fmt.Println(in.Text())
 
 }
